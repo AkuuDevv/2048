@@ -364,11 +364,11 @@ class Game {
     }
   }
 }
-// module.exports = Game
 
 const game = new Game()
 const startButton = document.querySelector("button")
 const score = document.querySelector(".score")
+const error = document.querySelector(".error")
 
 function getScore() {
   score.innerHTML = game.getScore()
@@ -402,7 +402,7 @@ startButton.addEventListener("click", () => {
   }
 })
 
-document.addEventListener('keydown', (e) => {
+const moves = document.addEventListener('keydown', (e) => {
   switch (e.key) {
       case 'ArrowLeft':
           game.moveLeft();
@@ -420,4 +420,13 @@ document.addEventListener('keydown', (e) => {
 
   getScore();
 });
+
+function updateMessage() {
+  if (game.getStatus() = Game.STATUS.lose) {
+    error.style.display = "block";
+  } else if (game.getStatus() = Game.STATUS.win)
+  {
+    win.style.display = "block";
+  }
+}
 
