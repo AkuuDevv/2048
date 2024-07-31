@@ -387,7 +387,7 @@ startButton.addEventListener("click", () => {
         fill="currentColor"></path></svg>
     <span>ReLaunch</span>`
     getScore()
-  }else if (startButton.classList.contains = "restart") {
+  }else if (startButton.classList.contains("restart")) {
     game.restart()
     startButton.classList = "button start"
     startButton.innerHTML = `<svg height="24"
