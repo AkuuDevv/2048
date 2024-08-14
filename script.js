@@ -310,7 +310,7 @@ class Game {
 
     for (let i = 0; i < this.state.length; i++) {
       for (let j = 0; j < this.state[i].length; j++) {
-        if (this.state[i][j] === 2048) {
+        if (this.state[i][j] === 128) {
           this.status = Game.STATUS.win;
 
           return;
@@ -369,6 +369,7 @@ const game = new Game()
 const startButton = document.querySelector("button")
 const score = document.querySelector(".score")
 const error = document.querySelector(".error")
+const win = document.querySelector(".win")
 
 function getScore() {
   score.innerHTML = game.getScore()
@@ -419,14 +420,17 @@ const moves = document.addEventListener('keydown', (e) => {
   }
 
   getScore();
-});
+  updateMessage();
+})
 
 function updateMessage() {
-  if (game.getStatus() = Game.STATUS.lose) {
+  console.log(game.getStatus());
+   if (game.getStatus() == Game.STATUS.lose) {
     error.style.display = "block";
-  } else if (game.getStatus() = Game.STATUS.win)
+  } else if (game.getStatus() == Game.STATUS.win)
   {
     win.style.display = "block";
   }
 }
+
 
