@@ -111,11 +111,17 @@ button:hover svg {
 button:hover span {
   transform: translateX(7px);
 }
-body {
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body, html {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  
 }
 
 .error {
@@ -124,12 +130,12 @@ body {
   padding: 12px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  justify-content: start;
   background: #EF665B;
   border-radius: 8px;
   box-shadow: 0px 0px 5px -3px #111;
-  margin: 20px;
+  margin: 30px auto;
   display: none;
 }
 
@@ -168,11 +174,12 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   background: #09ff00;
   border-radius: 8px;
   box-shadow: 0px 0px 5px -3px #111;
   display: none;
+  margin: 30px auto;
 }
 
 .win__icon {

@@ -310,7 +310,7 @@ class Game {
 
     for (let i = 0; i < this.state.length; i++) {
       for (let j = 0; j < this.state[i].length; j++) {
-        if (this.state[i][j] === 128) {
+        if (this.state[i][j] === 512) {
           this.status = Game.STATUS.win;
 
           return;
@@ -426,10 +426,10 @@ const moves = document.addEventListener('keydown', (e) => {
 function updateMessage() {
   console.log(game.getStatus());
    if (game.getStatus() == Game.STATUS.lose) {
-    error.style.display = "block";
+    error.style.display = "flex";
   } else if (game.getStatus() == Game.STATUS.win)
   {
-    win.style.display = "block";
+    win.style.display = "flex";
   }
 }
 
